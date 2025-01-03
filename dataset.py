@@ -78,11 +78,11 @@ class RegionsDataset(Dataset[JsonType]):
 
 
 class PopulationDataset(Dataset[pd.DataFrame]):
-    url = "data/UD-1735819179198.xlsx"
+    url = "data/population.xlsx"
 
     def _load(self) -> pd.DataFrame:
         return pd.read_excel(
-            "data/UD-1735819179198.xlsx",
+            "data/population.xlsx",
             engine="openpyxl",
             header=5,
             names=["region", "date", "population"],
