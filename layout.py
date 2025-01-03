@@ -1,4 +1,4 @@
-from dash import html, dcc
+from dash import dcc, html
 
 info = """
 This visualization presents the number of regular members of Junák – český skaut, z. s.

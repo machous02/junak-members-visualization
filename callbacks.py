@@ -1,8 +1,9 @@
+import pandas as pd
 import plotly.express as px
 from dash import Dash, Input, Output, State, dash_table
-import pandas as pd
-from dataset import JsonType
 from plotly.graph_objects import Figure
+
+from dataset import JsonType
 
 
 def register_callbacks(

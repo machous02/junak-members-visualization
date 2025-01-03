@@ -1,6 +1,7 @@
-from dataset import RegionsDataset, MembersDatasetExtended
 from dash import Dash
+
 from callbacks import register_callbacks
+from dataset import MembersDatasetExtended, RegionsDataset
 from layout import get_layout
 
 

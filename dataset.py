@@ -1,10 +1,10 @@
-from urllib.request import urlretrieve
-from pathlib import Path
-import pandas as pd
-from abc import ABC, abstractmethod
-from unidecode import unidecode
 import json
+from abc import ABC, abstractmethod
+from pathlib import Path
+from urllib.request import urlretrieve
 
+import pandas as pd
+from unidecode import unidecode
 
 DATA_DIR = Path("data")
 
