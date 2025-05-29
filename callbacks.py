@@ -10,9 +10,11 @@ def register_callbacks(
     app: Dash, df: pd.DataFrame, geo_json: JsonType, ageGroups: list[str]
 ) -> None:
     maximums = {
-        col: df[df["Location"] != "ceska republika"][col].max() for col in df.columns
+        col: pd.to_numeric(
+            df[df["Location"] != "ceska republika"][col], errors="coerce"
+        ).max()
+        for col in df.columns
     }
-
     opts = ageGroups
 
     def get_map(modeValue: str, ageGroups: list[str], sliderYear: int) -> Figure:
